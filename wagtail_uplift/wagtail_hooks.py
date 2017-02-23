@@ -1,6 +1,8 @@
+from django.conf.urls import url
 from django.utils.html import format_html
 from django.contrib.staticfiles.templatetags.staticfiles import static
 from wagtail.wagtailcore import hooks
+from wagtail.wagtailadmin.menu import MenuItem
 
 
 @hooks.register('insert_global_admin_css')
