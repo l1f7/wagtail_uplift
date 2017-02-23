@@ -1,3 +1,4 @@
 include LICENSE
 include README.md
 recursive-include wagtail_uplift/static *
+recursive-include wagtail_uplift/templates *
