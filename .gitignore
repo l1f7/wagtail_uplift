@@ -1,0 +1,58 @@
+# Python
+*.py[cod]
+*.egg*
+local_dev.py
+
+# Docker build, ignore requirements copied by make command
+build/backend/requirements
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*~
+
+# Tags file
+tags
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS generated files
+.DS_Store*
+thumbs.db
+Thumbs.db
+Desktop.ini
+
+# Front-end files
+node_modules
+raw/bower
+.sass-cache
+prototype
+
+local_production.py
+local_dev.py
+website/wagtail_blocks/media/*
+website/wagtail_blocks/static_collected/*
+
+# Docker build, ignore requirements copied by make command
+build/backend/requirements
+build/frontend/package.json
+build/frontend/npm-shrinkwrap.json
+build/frontend/.bowerrc
+build/frontend/bower.json
+.vimcache
+
