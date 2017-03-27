@@ -50,8 +50,6 @@ body.nav-open .wrapper {
     margin: 40px 20px 20px;
     padding: 0;
     color: #fff; }
-    .wrapper .logo svg g {
-      fill: #fff; }
   .wrapper .nav-wrapper {
     width: 200px;
     background: #4f80ff; }
@@ -396,15 +394,18 @@ body.nav-open .wrapper {
           font-size: 16px;
           line-height: 20px;
           width: 20px; }
-  .wrapper .tab-nav {
+  .wrapper .tab-nav,
+  .wrapper .tab-nav.merged {
     margin-top: -1px;
     background: #fafafa;
     border-bottom: 1px solid #e5e5e5;
     padding: 0 40px 0; }
-    .wrapper .tab-nav li {
+    .wrapper .tab-nav li,
+    .wrapper .tab-nav.merged li {
       margin: 0;
       width: auto; }
-      .wrapper .tab-nav li a {
+      .wrapper .tab-nav li a,
+      .wrapper .tab-nav.merged li a {
         padding: 10px 20px 12px;
         position: relative;
         top: 1px;
@@ -414,11 +415,14 @@ body.nav-open .wrapper {
         border: 1px solid transparent;
         text-transform: none;
         font-weight: 400; }
-        .wrapper .tab-nav li a::before {
+        .wrapper .tab-nav li a::before,
+        .wrapper .tab-nav.merged li a::before {
           display: none; }
-        .wrapper .tab-nav li a:hover {
+        .wrapper .tab-nav li a:hover,
+        .wrapper .tab-nav.merged li a:hover {
           color: #4f80ff; }
-      .wrapper .tab-nav li.active a {
+      .wrapper .tab-nav li.active a,
+      .wrapper .tab-nav.merged li.active a {
         border: 0;
         background: #fff;
         border: 1px solid #e5e5e5;
@@ -427,6 +431,8 @@ body.nav-open .wrapper {
         font-weight: 500; }
   .wrapper .tab-content section {
     padding: 0; }
+    .wrapper .tab-content section > .fields {
+      padding: 0 40px; }
   .wrapper .page-explorer .listing .index {
     background: #fff; }
     .wrapper .page-explorer .listing .index .title h2 {
@@ -722,8 +728,6 @@ body.nav-open .wrapper {
     margin: 0; }
     .wrapper .listing .title h2 a:hover {
       color: #4f80ff; }
-    .wrapper .listing.images > li:hover img {
-      border-color: #4f80ff; }
     .wrapper .listing.full-width th {
       background: #f4f4f4; }
       .wrapper .listing.full-width th a:hover,
@@ -844,6 +848,18 @@ body.nav-open .wrapper {
     border-color: #4f80ff;
     color: #4f80ff;
     background-color: transparent; }
+
+.tab-nav.merged {
+  background-color: #4f80ff; }
+  .tab-nav.merged a {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top-color: rgba(255, 255, 255, 0.1); }
+  .tab-nav.merged li.active a {
+    border-top-color: #fff;
+    color: #4f80ff; }
+
+.listing.images > li:hover img {
+  border-color: #4f80ff; }
 
 input,
 textarea,
