@@ -1,11 +1,12 @@
 {
   "name": "wagtail_uplift",
   "description": "A custom theme for Wagtail’s dashboard.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "author": "Lift Interactive <dev@liftinteractive.com>",
   "scripts": {
-    "dev": "gulp --dev"
+    "dev": "gulp --dev",
+    "upload": "python setup.py sdist && twine upload dist/*"
   },
   "dependencies": {
     "normalize-scss": "^6.0.0"
