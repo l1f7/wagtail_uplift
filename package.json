@@ -1,9 +1,9 @@
 {
   "name": "wagtail_uplift",
-  "version": "0.45.0",
-  "description": "This is the general starter repo for Lift's Django projects",
+  "description": "A custom theme for Wagtail’s dashboard.",
+  "version": "0.0.7",
+  "private": true,
   "author": "Lift Interactive <dev@liftinteractive.com>",
-  "readmeFilename": "README.md",
   "scripts": {
     "dev": "gulp --dev"
   },

@@ -1,11 +1,5 @@
-import os
 from setuptools import find_packages, setup
 
-with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
-    README = readme.read()
-
-# allow setup.py to be run from any path
-os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='wagtail_uplift',
@@ -13,12 +7,13 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     license='BSD License',
-    description='Theme for Wagtail.',
-    long_description=README,
+    description='A custom theme for Wagtail’s dashboard.',
+    long_description=open('README.rst').read(),
     url='https://github.com/l1f7/wagtail_uplift',
-    author='Adrian Gyuricska',
-    author_email='adrian@liftinteractive.com',
+    author='Lift Interactive',
+    author_email='dev+pypi@liftinteractive.com',
     classifiers=[
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
