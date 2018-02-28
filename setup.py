@@ -9,7 +9,7 @@ setup(
     include_package_data=True,
     license='BSD License',
     description='A custom theme for Wagtail’s dashboard.',
-    long_description=open('README.rst').read(),
+    long_description='',
     url='https://github.com/l1f7/wagtail_uplift',
     author='Lift Interactive',
     author_email='dev+pypi@liftinteractive.com',
