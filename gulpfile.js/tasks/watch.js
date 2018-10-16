@@ -2,7 +2,6 @@ var gulp    = require('gulp')
 ,   sass    = require('../config/sass')
 ,   watch   = require('gulp-watch');
 
-//gulp.task('watch', ['browserSync'], function() {
 gulp.task('watch', function() {
 
   // We set 'sass' as a dependency of 'cssmin', so

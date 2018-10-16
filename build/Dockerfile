@@ -1,0 +1,34 @@
+FROM node:4-slim
+
+# Set a term for terminal inside the container, can't clear without it
+ENV TERM xterm-256color
+
+# Set the loglevel for npm with environment variable
+ENV NPM_CONFIG_LOGLEVEL=warn
+
+# Prefix path with global node_modules folder
+# This allows npm package binaries to be available everywhere
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Update and install
+RUN apt-get update && apt-get install -y \
+    # git may be required for pulling npm packages from a repo
+    git \
+    # bzip2 required for phantomjs-prebuild (dependency of svg-sprite)
+    bzip2
+
+# Add the project requirements
+ADD package.json /app/package.json
+
+# Install the requirements
+RUN /bin/bash -c 'cd /app && npm install && npm cache clean'
+
+# The code should be symlinked to this directory
+WORKDIR /app
+
+# Expose the 1337 port
+EXPOSE 1337
+
+# Create the entry script
+ADD entry.sh /opt/
+RUN chmod 755 /opt/entry.sh
