@@ -37,5 +37,5 @@ tags
 *.egg*
 local_dev.py
 local_production.py
-build/
+build/package.json
 dist/
