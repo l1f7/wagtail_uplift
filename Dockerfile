@@ -27,7 +27,3 @@ WORKDIR /app
 
 # Expose the 1337 port
 EXPOSE 1337
-
-# Create the entry script
-ADD entry.sh /opt/
-RUN chmod 755 /opt/entry.sh
