@@ -1,10 +1,8 @@
-FROM node:4-slim
+FROM node:10-slim
+MAINTAINER Lift Interactive <team@liftinteractive.com>
 
 # Set a term for terminal inside the container, can't clear without it
 ENV TERM xterm-256color
-
-# Set the loglevel for npm with environment variable
-ENV NPM_CONFIG_LOGLEVEL=warn
 
 # Prefix path with global node_modules folder
 # This allows npm package binaries to be available everywhere
@@ -18,10 +16,11 @@ RUN apt-get update && apt-get install -y \
     bzip2
 
 # Add the project requirements
-ADD package.json /app/package.json
+# This will add the package.json and package-lock.json if it exists
+ADD package*.json /app/
 
 # Install the requirements
-RUN /bin/bash -c 'cd /app && npm install && npm cache clean'
+RUN /bin/bash -c 'cd /app && npm install && npm cache clean --force'
 
 # The code should be symlinked to this directory
 WORKDIR /app

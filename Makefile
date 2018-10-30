@@ -6,6 +6,8 @@ IMAGENAME=uplift_frontend_image
 
 build:
 	cp -r package.json ./build
+	# Copy package-lock.json if it exists
+	[ -f package-lock.json ] && cp -r package-lock.json ./build || true
 	docker build -t $(IMAGENAME) ./build
 
 up:
@@ -16,6 +18,3 @@ down:
 
 enter:
 	docker exec -it $(CONTAINERNAME) /bin/bash
-
-rsync:
-	docker run -v $(CURDIR)/build/environment/.:/environment/ $(IMAGENAME) /bin/bash -c '/opt/rsync_packages.sh'
