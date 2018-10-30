@@ -1,6 +1,13 @@
 # Wagtail Uplift
 Custom skin for Wagtail Admin
 
+## Usage
+
+1. `pip install wagtail-uplift` or `pip install git+https://github.com/l1f7/wagtail_uplift.git#egg=wagtail_uplift`
+2. Add `'wagtail_uplift'` to your `INSTALLED_APPS`.
+
+It should work with most versions of Wagtail, including the latest.
+
 ## Development
 **Requires: Docker**
 
