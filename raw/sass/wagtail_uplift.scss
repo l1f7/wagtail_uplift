@@ -211,6 +211,10 @@ body {
     .footer {
       width: 200px;
       color: $cs-sidebar-link;
+
+      .avatar {
+        margin: 5px 15px 5px 10px;
+      }
     }
 
     .account {
@@ -295,14 +299,17 @@ body {
 
     .nav-submenu {
       box-shadow: 1px 0 1px rgba($c-steel, 0.15);
-      width: 200px;
+      width: 220px;
       left: 200px;
-      padding: 0 0 1.5em;
+
+      .footer {
+        width: 100%;
+      }
     }
   }
 
   .nav-search {
-    margin: 20px 10px;
+    margin: 20px 0;
 
     input {
       border-radius: 60px;
@@ -411,7 +418,7 @@ body {
         }
       }
 
-      input[type=text],
+      input[type='text'],
       select {
         font-size: 14px;
         border-width: 1px;
@@ -476,6 +483,10 @@ body {
           font-size: 24px;
           margin-right: 10px;
         }
+      }
+
+      .user-name {
+        color: #838383;
       }
     }
 
@@ -634,7 +645,7 @@ body {
     margin-top: -1px;
     background: $c-snow;
     border-bottom: 1px solid $c-snow-xdark;
-    padding: 0 40px 0;
+    padding: 0 40px;
 
     li {
       margin: 0;
@@ -645,7 +656,6 @@ body {
         position: relative;
         top: 1px;
         background-color: transparent;
-        border: 0;
         color: $c-silver;
         border: 1px solid transparent;
         text-transform: none;
@@ -662,7 +672,6 @@ body {
 
       &.active {
         a {
-          border: 0;
           background: $c-white;
           border: 1px solid $c-snow-xdark;
           border-bottom-color: $c-white;
@@ -864,11 +873,12 @@ body {
     }
   }
 
-  .fields > li, .field-col {
+  .fields > li,
+  .field-col {
     padding: 10px 0;
   }
 
-  .field {
+  //.field {
     // &.checkbox_input {
     //   label {
     //     padding-top: 1.75em;
@@ -884,7 +894,7 @@ body {
     //     width: auto;
     //   }
     // }
-  }
+  //}
 
   .objects {
     padding: 40px;
@@ -975,7 +985,7 @@ body {
       textarea,
       .richtext {
         font-family: $base-font-body;
-        padding: 20px 20px;
+        padding: 20px;
         border-width: 0 1px 0 0;
         font-size: 16px;
         background: $c-snow;
@@ -1161,7 +1171,7 @@ body {
         background: $c-snow-dark;
 
         a:hover,
-        a:hover:before {
+        a:hover::before {
           color: $ca-primary;
         }
       }
@@ -1392,7 +1402,7 @@ select,
   }
 }
 
-input[type=checkbox] {
+input[type='checkbox'] {
   &::before {
     border: 1px solid $c-smoke-dark;
     border-radius: 3px;
@@ -1411,7 +1421,7 @@ input[type=checkbox] {
   }
 }
 
-input[type=radio] {
+input[type='radio'] {
   &::before {
     border: 1px solid $c-smoke-dark;
     border-radius: 100%;
@@ -1450,9 +1460,9 @@ input[type=radio] {
   }
 }
 
-.choice_field .input select ~ span:after,
-.model_choice_field .input select ~ span:after,
-.typed_choice_field .input select ~ span:after {
+.choice_field .input select ~ span::after,
+.model_choice_field .input select ~ span::after,
+.typed_choice_field .input select ~ span::after {
   line-height: 44px;
   width: 50px;
   font-size: 30px;
@@ -1751,7 +1761,7 @@ input[type=radio] {
     border: 1px solid $c-smoke-dark;
     background: $c-white;
     font-weight: normal;
-    color: $c-slate
+    color: $c-slate;
   }
 
   .ui-state-active,
@@ -1781,7 +1791,7 @@ input[type=radio] {
     }
   }
 
-  .nav-toggle.icon:before {
+  .nav-toggle.icon::before {
     color: $cb-digital;
   }
 
@@ -1795,7 +1805,7 @@ input[type=radio] {
     }
 
     .logo {
-      margin: 30px 20px 30px;
+      margin: 30px 20px;
     }
 
     .nav-wrapper {
@@ -1841,6 +1851,14 @@ input[type=radio] {
       &.nice-padding {
         padding-left: 20px;
         padding-right: 20px;
+      }
+
+      .header-title {
+        padding-left: 0;
+      }
+
+      .col1 {
+        left: 0;
       }
     }
 
