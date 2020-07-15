@@ -1,9 +1,9 @@
 import django
 from django.conf.urls import url
 from django.utils.html import format_html
-if django.VERSION[0] == "2":
+if django.VERSION[0] == 2:
     from django.contrib.staticfiles.templatetags.staticfiles import static
-elif django.VERSION[0] == "3":
+elif django.VERSION[0] == 3:
     from django.templatetags.static import static
 from wagtail.core import hooks
 from wagtail.admin.menu import MenuItem
